@@ -54,7 +54,7 @@ class Solution:
 
     # Choose your level here: 'worlds.easy()', 'worlds.medium()', or 'worlds.hard()'!
     def getLevel(self):
-        return worlds.hard()
+        return worlds.easy()
 
     # Smaller pause time = faster simulation
     def getPauseTime(self):
@@ -63,8 +63,25 @@ class Solution:
     # Your solution!
     def moveTowardPizza(self, cat):
         if cat.isBlocked():
-        cat.turnLeft()if cat.isFacingS():
+            cat.turnLeft()
+        if cat.isFacingS():
             cat.walk()
-        if cat.isFacingE()
+        if cat.isFacingE():
+            cat.walk()
+        if cat.isFacingN():
+            cat.turnRight()
+        if cat.isFacingE():
+            cat.turnRight()
+        if cat.isBlocked():
+            cat.turnLeft()
+        if cat.isBlocked():
+            cat.turnLeft()
+            cat.walk()
+        if cat.isFacingW():
+           cat.turnLeft()
+           cat.turnLeft()
+        if cat.isFacingN():
+            cat.turnRight()
+
 
         # Wheeeee!
