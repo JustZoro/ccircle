@@ -82,6 +82,7 @@ class Solution:
            cat.turnLeft()
         if cat.isFacingN():
             cat.turnRight()
+            cat.turnLeft()
 
 
         # Wheeeee!

@@ -1,5 +1,4 @@
 import ccircle
-import Masamune
 import world
 import random
 import Ball
@@ -10,18 +9,18 @@ window = ccircle.Window('Lab 4', 800, 600)
 my_world = world.World('city')
 print(dir(my_world))
 
-for i in range(200):
-    x = random.randint(0, 800)
-    y = random.randint(0, 150)
-    size = 25 + 75 * (random.uniform(0, 1) ** 2)
-    vx = random.uniform(0, 100)
-    my_world.add(cloud.Cloud(x, y, size, vx))
+for i in range(10):
+    my_ball = Ball.Ball(random.randint(0, 800), random.randint(100, 150))
+    my_world.add(my_ball)
 
-
-
-
-my_ball = ball.Ball(400, 300)
+my_ball = Ball.Ball(100, 100)
 my_world.add(my_ball)
 
-start = time.time()
-dt = 1.0 / 60.0
+while window.isOpen():
+    my_world.draw(window)
+
+    start = time.time()
+    dt = 1.0 / 60.0
+
+    my_world.update(dt)
+    window.update()

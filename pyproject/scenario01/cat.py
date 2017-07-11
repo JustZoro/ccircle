@@ -17,7 +17,7 @@ class Cat:
         self.tx = x
         self.ty = y
         self.image = [
-            ccircle.Image('cat_n.png'),
+            ,
             ccircle.Image('cat_e.png'),
             ccircle.Image('cat_s.png'),
             ccircle.Image('cat_w.png'),

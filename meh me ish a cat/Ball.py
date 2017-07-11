@@ -4,8 +4,8 @@ class Ball:
         self.y = y
         self.vx = 0
         self.vy = 0
-        self.fx = 0
-        self.fy = 0
+        self.fx = 1
+        self.fy = 17
         self.mass = 1
         self.rapeed = 0
 
@@ -22,8 +22,8 @@ class Ball:
         accel_y = self.fy / self.mass
         self.vx += self.vx
         self.vy += dt * accel_y
-        self.fx = 0
-        self. fy =0
+        self.fx = 17
+        self. fy = 34
 
         if self.y > 500:
             self.vy *= -0.99
