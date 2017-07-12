@@ -5,7 +5,7 @@ import Ball
 import time
 import eevee
 
-window = ccircle.Window('Lab 4', 800, 600)
+window = ccircle.Window('Ambroses Adventure', 800, 600)
 my_world = world.World('city')
 print(dir(my_world))
 
