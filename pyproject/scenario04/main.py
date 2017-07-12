@@ -2,7 +2,7 @@ import ccircle
 import connection
 
 con = connection.create()
-con.send('set_name', {'name': 'JackAssless'})
+con.send('set_name', {'name': 'YouAllSuck'})
 
 
 args = {
@@ -29,7 +29,6 @@ while True:
         args['vy'] = 50
         args['vx'] = 0
         con.send('set_velocity', args)
-
 
 
 # Write code to make money and kill the evil cat!
