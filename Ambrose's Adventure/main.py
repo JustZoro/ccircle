@@ -1,7 +1,7 @@
 import ccircle
-import world
+import worlds
 import time
-import cabin
+import Cabin
 
 window = ccircle.Window('Ambroses Adventure', 1200, 1200)
 my_world = world.World('Cabin')
