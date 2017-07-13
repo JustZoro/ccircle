@@ -1,15 +1,14 @@
 import ccircle
-import worlds
-import time
-import Cabin
+import rooms
+import Ambrose
 
-window = ccircle.Window('Ambroses Adventure', 1200, 1200)
-my_world = world.World('Cabin')
+window = ccircle.Window("Ambroses Adventure", 2021, 2021)
+rooms = Ambrose.Rooms(place.Player)
 
-
-while window.isOpen:
-    window.clear(0,0,0)
-    window.drawRect(990, 560, 1100, 1100)
-
-    my_world.update(dt)
+time = 0
+while window.isOpen():
+    window.clear(0, 0, 0)
     window.update()
+    room.update(dt)
+
+
