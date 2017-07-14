@@ -2,7 +2,7 @@ import ccircle
 import connection
 
 con = connection.create()
-con.send('set_name', {'name': 'YouAllSuck'})
+con.send('set_name', {'name': 'Ambrosius'})
 
 
 args = {

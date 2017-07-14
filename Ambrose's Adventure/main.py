@@ -1,30 +1,18 @@
 import ccircle
+import worlds
 
 window = ccircle.Window("Ambroses Adventure")
+my_world = worlds.World('AA_Coty(2).gif')
 window.toggleMaximized()
+print(dir(my_world))
 
+for i in range(2):
+    image = ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseBehind.png")
 while window.isOpen():
-    window.clear(0, 0, 0)
-for i in range():
-        window.draw('AA_AmbroseSideStop.png')
-        window.draw('AA_AmbroseSideW.png')
-        window.draw('AA_AmbroseSideStop.png')
-        window.draw('AA_AmbroseSideW(2).png')
-while True:
-        if ccircle.isKeyDown('left'):
-            args['vy'] = 0
-            args['vx'] = -50
-            con.send('set_velocity', args)
-        if ccircle.isKeyDown('right'):
-            args['vy'] = 0
-            args['vx'] = 50
-            con.send('set_velocity', args)
-        if ccircle.isKeyDown('up'):
-            args['vy'] = -50
-            args['vx'] = 0
-            con.send('set_velocity', args)
-        if ccircle.isKeyDown('down'):
-            args['vy'] = 50
-            args['vx'] = 0
-            con.send('set_velocity', args)
-window.update()
+    my_world.draw(window)
+    image.draw(2, 0, 1599, 900)
+
+    dt = 1.0 / 60.0
+
+    my_world.update(dt)
+    window.update()
