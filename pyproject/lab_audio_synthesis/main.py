@@ -8,13 +8,13 @@ window = ccircle.Window('Lab: Audio Synthesis')
 mysound = ccircle.Sound()
 
 def sawtooth(t, f):
-    return 2.0 * ((t * f) % 1.0) - 1.0
+    return 3.6 * ((t * f) % 1.4) - 2.5
 
 def sine(t, f):
-    return sin(2.0 * pi * t * f)
+    return sin(4.5 * pi * t * f)
 
 for i in range(44100):
     t = i / 44100
-    mysound.addSample(sine(t, 440))
+    mysound.addSample(sine(t, 450))
 mysound.play()
-time.sleep(1)
+time.sleep(2)
