@@ -11,18 +11,18 @@ class Player:
         self.tx = x
         self.ty = y
         self.image = [
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseCharModel.png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseCharModel(2).png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseCharModel(6).png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseCharModel(3).png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseCharModel(4).png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseCharModel(5).png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseSideStop.png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseSideW.png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseSideW(2).png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseBehind.png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseBehind(W).png"),
-            ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_AmbroseBehind(W2).png"),
+            ccircle.Image("image/AA_AmbroseCharModel.png"),
+            ccircle.Image("image/AA_AmbroseCharModel(2).png"),
+            ccircle.Image("/image/AA_AmbroseCharModel(6).png"),
+            ccircle.Image("image/AA_AmbroseCharModel(3).png"),
+            ccircle.Image("image/AA_AmbroseCharModel(4).png"),
+            ccircle.Image("image/AA_AmbroseCharModel(5).png"),
+            ccircle.Image("image/AA_AmbroseSideStop.png"),
+            ccircle.Image("image/AA_AmbroseSideW.png"),
+            ccircle.Image("image/AA_AmbroseSideW(2).png"),
+            ccircle.Image("image/AA_AmbroseBehind.png"),
+            ccircle.Image("image/AA_AmbroseBehind(W).png"),
+            ccircle.Image("image/AA_AmbroseBehind(W2).png"),
         ]
         self.facing = West
 
