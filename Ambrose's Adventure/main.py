@@ -1,11 +1,10 @@
 import ccircle
-import world
 
 window = ccircle.Window("Ambroses Adventure")
 window.toggleMaximized()
 
 for i in range(2):
-    imageBG = ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_Coty(2).gif")
+    imageBG = ccircle.Image("C:/Users/ProBook/PycharmProjects/ccircle/Ambrose's Adventure/image.gif")
 while window.isOpen():
     window.clear(1, 1, 1)
     imageBG.draw(2, 0, 1599, 920)
