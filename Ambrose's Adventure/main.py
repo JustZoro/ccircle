@@ -1,35 +1,33 @@
 import ccircle
-import connection
+import world
 
-con = connection.create()
-con.send('set_name', {'name': 'Ambrosius'})
+window = ccircle.Window("Ambroses Adventure")
+window.toggleMaximized()
 
+for i in range(2):
+    imageBG = ccircle.Image("C:/Users/FLL234-06/PycharmProjects/ccircle/Ambrose's Adventure/image/AA_Coty(2).gif")
+while window.isOpen():
+    window.clear(1, 1, 1)
+    imageBG.draw(2, 0, 1599, 920)
 
+    dt = 1.0 / 60.0
 args = {
     'vx': -43,
     'vy': -24,
 }
 
-con.send('set_velocity', args)
 
 while True:
     if ccircle.isKeyDown('left'):
         args['vy'] = 0
         args['vx'] = -50
-        con.send('set_velocity', args)
     if ccircle.isKeyDown('right'):
         args['vy'] = 0
         args['vx'] = 50
-        con.send('set_velocity', args)
     if ccircle.isKeyDown('up'):
         args['vy'] = -50
         args['vx'] = 0
-        con.send('set_velocity', args)
     if ccircle.isKeyDown('down'):
         args['vy'] = 50
         args['vx'] = 0
-        con.send('set_velocity', args)
-
-
-# Write code to make money and kill the evil cat!
-# See readme.txt !
+window.update()

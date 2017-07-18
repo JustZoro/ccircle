@@ -53,12 +53,40 @@ class Solution:
 
     # Choose your level here: 'worlds.easy()', 'worlds.medium()', or 'worlds.hard()'!
     def getLevel(self):
-        return worlds.hard()
+        return worlds.easy()
 
     # Smaller pause time = faster simulation
     def getPauseTime(self):
         return 0.01
 
+<<<<<<< HEAD
+    # Your solution!
+    def moveTowardPizza(self, cat):
+        if cat.isBlocked():
+            cat.turnLeft()
+        if cat.isFacingS():
+            cat.walk()
+        if cat.isFacingE():
+            cat.walk()
+        if cat.isFacingN():
+            cat.turnRight()
+        if cat.isFacingE():
+            cat.turnRight()
+        if cat.isBlocked():
+            cat.turnLeft()
+        if cat.isBlocked():
+            cat.turnLeft()
+            cat.walk()
+        if cat.isFacingW():
+           cat.turnLeft()
+           cat.turnLeft()
+        if cat.isFacingN():
+            cat.turnRight()
+            cat.turnLeft()
+
+
+        # Wheeeee!
+=======
     def wall_on_right(self, cat):
         cat.turnRight()
         wall_on_right = cat.isBlocked()
@@ -86,3 +114,4 @@ class Solution:
 
         self.was_wall_on_right_last_frame = is_wall_on_right
 
+>>>>>>> 87deb1366a45f6732980307cc20a68d3b117d0a8
