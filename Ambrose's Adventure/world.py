@@ -13,7 +13,7 @@ class Player:
         self.image = [
             ccircle.Image("image/AA_AmbroseCharModel.png"),
             ccircle.Image("image/AA_AmbroseCharModel(2).png"),
-            ccircle.Image("/image/AA_AmbroseCharModel(6).png"),
+            ccircle.Image("image/AA_AmbroseCharModel(6).png"),
             ccircle.Image("image/AA_AmbroseCharModel(3).png"),
             ccircle.Image("image/AA_AmbroseCharModel(4).png"),
             ccircle.Image("image/AA_AmbroseCharModel(5).png"),
@@ -24,31 +24,29 @@ class Player:
             ccircle.Image("image/AA_AmbroseBehind(W).png"),
             ccircle.Image("image/AA_AmbroseBehind(W2).png"),
         ]
-        self.facing = West
 
-    def draw(self, x, y, s, window):
-        self.image[self.facing].draw(x, y, s, s)
+    if Player.isFacingE():
+        image.draw("")
+
+    def draw(self):
+        self.image[self.facing].draw(900, 240, 89, 109)
 
     def getName(self):
         return 'pusheen'
 
     def update(self, dt):
-        pass
-
-    def Player(self):
-        return
         if ccircle.isKeyDown('left'):
-            args['vy'] = 0
-            args['vx'] = -50
+            self.y = 0
+            self.x = -50
         if ccircle.isKeyDown('right'):
-            args['vy'] = 0
-            args['vx'] = 50
+            self.y = 0
+            self.x = 50
         if ccircle.isKeyDown('up'):
-            args['vy'] = -50
-            args['vx'] = 0
+            self.y = -50
+            self.x = 0
         if ccircle.isKeyDown('down'):
-            args['vy'] = 50
-            args['vx'] = 0
+            self.y = 50
+            self.x = 0
 
 
 
