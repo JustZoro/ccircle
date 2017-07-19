@@ -37,7 +37,7 @@ class Ambrose:
 
     def draw(self):
         state = self.action +"_"+ self.facing
-        self.image[state][0].draw(self.x, self.y, 89, 109)
+        self.image[state][0].draw(self.x, self.y, 160, 189)
 
 
 
@@ -45,19 +45,19 @@ class Ambrose:
         if ccircle.isKeyDown('left'):
             self.facing = "left"
             self.action = "walk"
-            self.x  -=50*dt
+            self.x  -=120*dt
         elif ccircle.isKeyDown('right'):
             self.facing = "right"
             self.action = "walk"
-            self.x  +=50*dt
+            self.x  +=120*dt
         elif ccircle.isKeyDown('up'):
             self.facing = "back"
             self.action = "walk"
-            self.y -=50*dt
+            self.y -=120*dt
         elif ccircle.isKeyDown('down'):
             self.facing = "front"
             self.action = "walk"
-            self.y  +=50*dt
+            self.y  +=120*dt
         else:
             self.action = "idle"
 
