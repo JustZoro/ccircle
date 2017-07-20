@@ -39,14 +39,22 @@ class Ambrose:
             for frame in frames:
                 frame.eraseGreen()
 
-    def draw(self):
+    def draw(self, window):
         state = self.action +"_"+ self.facing
         frame = int(self.counter/0.3) % len(self.image[state])
-        self.image[state][frame].draw(self.x, self.y, 160, 189)
+        self.image[state][frame].draw(self.x - 65, self.y - 196, 160, 212)
 
 
 
     def update(self, dt):
+        for obj in self.world.objects:
+            if obj.getType() == "door":
+               if obj.x<= self.x<= obj.x + obj.width and obj.y<= self.y<= obj.y + obj.height:
+                    self.world.remove(self)
+                    obj.link.add(self)
+                    self.x = obj.linkx
+                    self.y = obj.linky
+                    break
         self.counter+=dt
         if ccircle.isKeyDown('left'):
             self.facing = "left"
@@ -66,4 +74,7 @@ class Ambrose:
             self.y  +=self.speed*dt
         else:
             self.action = "idle"
+
+    def getType(self):
+        return "player"
 
