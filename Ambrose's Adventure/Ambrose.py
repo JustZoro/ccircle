@@ -6,6 +6,8 @@ West = 3
 
 class Ambrose:
     def __init__(self, x, y):
+        self.speed = 310
+        self.counter = 0
         self.x = x
         self.y = y
         self.facing = "right"
@@ -33,31 +35,35 @@ class Ambrose:
                              ]
         }
 
-
+        for anim, frames in self.image.items():
+            for frame in frames:
+                frame.eraseGreen()
 
     def draw(self):
         state = self.action +"_"+ self.facing
-        self.image[state][0].draw(self.x, self.y, 160, 189)
+        frame = int(self.counter/0.3) % len(self.image[state])
+        self.image[state][frame].draw(self.x, self.y, 160, 189)
 
 
 
     def update(self, dt):
+        self.counter+=dt
         if ccircle.isKeyDown('left'):
             self.facing = "left"
             self.action = "walk"
-            self.x  -=120*dt
+            self.x  -=self.speed*dt
         elif ccircle.isKeyDown('right'):
             self.facing = "right"
             self.action = "walk"
-            self.x  +=120*dt
+            self.x  +=self.speed*dt
         elif ccircle.isKeyDown('up'):
             self.facing = "back"
             self.action = "walk"
-            self.y -=120*dt
+            self.y -=self.speed*dt
         elif ccircle.isKeyDown('down'):
             self.facing = "front"
             self.action = "walk"
-            self.y  +=120*dt
+            self.y  +=self.speed*dt
         else:
             self.action = "idle"
 
