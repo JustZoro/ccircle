@@ -3,12 +3,6 @@ from Ambrose import*
 import time
 from World import*
 from Door import*
-
-# Fix door in cabin
-# Fix Ambrose starting pos
-# Add door from outside to cabin
-# Create mask for outside
-
 window = ccircle.Window("Ambroses Adventure")
 window.toggleMaximized()
 size = window.getSize()
@@ -17,7 +11,7 @@ Cabin = World(ccircle.Image("image/AA_Cabin(Inside).png"), ccircle.Image("image/
 Outside = World(ccircle.Image("image/AA_Outside.png"), ccircle.Image("image/AA_Outside_mask.png"))
 Upstairs = World(ccircle.Image("image/AA_Cabin_Upstairs.png"), ccircle.Image("image/AA_Cabin_Upstairs_mask.png"))
 Intersection = World(ccircle.Image("image/AA_Intersection.png"), ccircle.Image("image/AA_Intersection_mask.png"))
-Dream = World(ccircle.Image("image/AA_DreamWorld.png"), ccircle.Image("image/AA_Cabin(Inside)_mask.png"))
+Dream = World(ccircle.Image("image/AA_DreamWorld.png"), ccircle.Image("image/AA_DreamWorld_mask.png"))
 CityPath = World(ccircle.Image("image/AA_City_Way.png"), ccircle.Image("image/AA_City_Way_mask.png"))
 Cabin.add(Door(522, 635, 90, 45, Outside, 108, 158))
 Outside.add(Door(100, 80, 34, 34, Cabin, 530, 625))
