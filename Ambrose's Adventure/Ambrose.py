@@ -56,24 +56,32 @@ class Ambrose:
                     self.y = obj.linky
                     break
         self.counter+=dt
+
+        newx = self.x
+        newy = self.y
         if ccircle.isKeyDown('left'):
             self.facing = "left"
             self.action = "walk"
-            self.x  -=self.speed*dt
+            newx  -=self.speed*dt
         elif ccircle.isKeyDown('right'):
             self.facing = "right"
             self.action = "walk"
-            self.x  +=self.speed*dt
+            newx  +=self.speed*dt
         elif ccircle.isKeyDown('up'):
             self.facing = "back"
             self.action = "walk"
-            self.y -=self.speed*dt
+            newy -=self.speed*dt
         elif ccircle.isKeyDown('down'):
             self.facing = "front"
             self.action = "walk"
-            self.y  +=self.speed*dt
+            newy  +=self.speed*dt
         else:
             self.action = "idle"
+
+        r, g, b, a = self.world.collision.getPixel(int(newx), int(newy))
+        if r == 1:
+            self.x = newx
+            self.y = newy
 
     def getType(self):
         return "player"

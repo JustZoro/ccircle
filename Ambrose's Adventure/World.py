@@ -13,6 +13,8 @@ class World:
         self.objects.remove(obj)
 
     def draw(self, window):
+        sx, sy = window.getSize()
+        window.drawRect(0, 0, sx, sy, 0, 0, 0)
         self.bg.draw(0, 0, self.width, self.height)
         for obj in self.objects:
             obj.draw(window)
